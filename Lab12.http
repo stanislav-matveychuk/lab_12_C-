@@ -1,0 +1,18 @@
+@Lab12_HostAddress = http://localhost:5080
+
+GET {{Lab12_HostAddress}}/api/products
+Accept: application/json
+
+###
+GET {{Lab12_HostAddress}}/api/categories
+Accept: application/json
+
+###
+POST {{Lab12_HostAddress}}/api/products
+Content-Type: application/json
+
+{
+  "name": "Keyboard",
+  "price": 75,
+  "categoryId": 1
+}
