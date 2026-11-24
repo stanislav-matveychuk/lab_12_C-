@@ -37,15 +37,3 @@ dotnet run -- --urls http://localhost:5080
 ```json
 { "name": "Keyboard", "price": 75, "categoryId": 1 }
 ```
-
-## Контрольні питання
-
-1. Code First описує структуру БД класами C#; EF Core створює схему міграціями.
-2. Зв'язок один до багатьох реалізовано зовнішнім ключем CategoryId,
-   навігацією Product.Category та колекцією Category.Products.
-3. HasData додає фіксовані категорії міграцією; DbSeeder додає товари через
-   DbContext і SaveChangesAsync після перевірки наявності даних.
-4. Міграція містить Up для застосування змін і Down для відкату;
-   EF зберігає історію застосованих міграцій у БД.
-5. Swagger або Postman надсилають GET/POST; перевіряють HTTP-код,
-   JSON, Location та збереження запису наступним GET.
